@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 250px;
+    margin: 20px;
+    background-image: url('casino/visu6.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border:  purple 1px solid;
+    border-radius: 15px;
+}
+
+.liensContainerPC {
+    height: 50px;
+    display: flex;
+    position:  relative;
+    justify-content: flex-end;
+}
+
+.liensPC {
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.liensPC img {
+    height: 100%;
+}
+
+.liensContainerMobile {
+    display: none;
+}
+
+body{
+  background: #000;
+}
+
+h1 {
+    margin-top: 25px;
+    height: 150px;
+}
+
+.neon{
+  font-family: 'Monoton', cursive;
+  font-size:130px;
+  color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-shadow: 1px 0px 4px #FB00FF, 2px 0px 4px #FB00FF, 3px 0px 4px #FB00FF, 2px 0px 3px #1300FF, 2px 3px 15px #1300FF, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #FB00FF,40px 0vw 200px #0013FF;
+}
+
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        //text-shadow: none;
+    opacity: .99;
+        
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+
+#imgContainer {
+    height: calc(100% - 290px);
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+
+.visuelPosition {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.prevVisu {
+    background-color: whitesmoke;
+    border-radius: 50%;
+    opacity: 0.3;
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 5;
+    bottom: 10px;
+    left: 10px;
+}
+
+.prevVisu:hover {
+    opacity: 0.7;
+}
+
+.nextVisu {
+    background-color: whitesmoke;
+    border-radius: 50%;
+    opacity: 0.3;
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 5;
+    bottom: 10px;
+    right: 10px;
+}
+
+.nextVisu:hover {
+    opacity: 0.7;
+}
+
+.fleche {
+    height: 100px;
+    width: 100px;
+}
+
+section {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+section:target {
+      display: block;
+      animation-name: displaySection;
+      animation-duration: 1s;
+      animation-direction: alternate-reverse;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      z-index: 0;
+    }
+
+    @keyframes displaySection {
+     0% {
+        opacity:  100%;
+     }
+
+     100% {
+        opacity: 0%;
+     }
+}
+
+.textContainer {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #FB00FF;
+    padding: 20px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: auto;
+    width: 500px;
+    z-index: 5;
+    top: 150px;
+    left: 250px;
+    font-size: 27px;
+    font-family: 'Mitr', sans-serif;
+    transition: transform 1s;
+    transform: scale(1.0);
+    animation-name: animTexte;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+}
+
+.textContainer:hover {
+    transition: transform 1s;
+    transform: scale(1.3);
+    text-shadow: #1300FF 3px 0 30px;
+
+}
+
+.textContainerVisu1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #FB00FF;
+    padding: 20px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+    z-index: 5;
+    top: 200px;
+    right: 550px;
+    font-size: 27px;
+    font-family: 'Mitr', sans-serif;
+    transition: transform 1s;
+    transform: scale(1.0);
+    animation-name: animTexte;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+}
+
+.textContainerVisu1:hover {
+    transition: transform 1s;
+    transform: scale(1.3);
+    text-shadow: #1300FF 3px 0 30px;
+
+}
+
+.textContainerVisu3 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #FB00FF;
+    padding: 20px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+    z-index: 5;
+    top: 200px;
+    right: 550px;
+    font-size: 27px;
+    font-family: 'Mitr', sans-serif;
+    transition: transform 1s;
+    transform: scale(1.0);
+    animation-name: animTexte;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+}
+
+.textContainerVisu3:hover {
+    transition: transform 1s;
+    transform: scale(1.3);
+    text-shadow: #1300FF 3px 0 30px;
+
+}
+
+#textContainerVisu5 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #FB00FF;
+    padding: 20px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: auto;
+    width: 500px;
+    max-width: 100%;
+    z-index: 5;
+    top: 40%;
+    left: 15%;
+    font-size: 27px;
+    font-family: 'Mitr', sans-serif;
+    transition: transform 1s;
+    transform: scale(1.0);
+    animation-name: animTexte;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+}
+
+#textContainerVisu5:hover {
+    transition: transform 1s;
+    transform: scale(1.3);
+    text-shadow: #1300FF 3px 0 30px;
+
+}
+
+@keyframes animTexte {
+
+    0%{
+        opacity: 0;
+        right: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 170px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************************* */
+/*                CSS  pour les Téléphones                             */
+/* ******************************************************************* */
+
+
+@media screen and (max-width: 1023px) {
+    body {
+        font-size: 25px;
+    }
+
+    header {
+        height: 100px;
+        background-size: cover;
+        border-radius: 15px;
+    }
+
+
+    h1 {
+        margin-top: 0;
+        height: 100px;
+    }
+    .neon {
+        font-size: 25px;
+    }
+
+
+    .liensContainerPC {
+        display: none;
+    }
+
+    .liens {
+        height: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .liens img {
+        height: 100%;
+    }
+
+    .liensContainerMobile {
+        bottom: 5%;
+        display: flex;
+        position: absolute;
+        height: 50px;
+        left:  10%;
+    }
+
+    .textContainer {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        top: 20px;
+        font-size: 20px;
+        pointer-events: none;
+    }
+
+    .textContainerVisu1 {
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 20px;
+        font-size: 20px;
+        pointer-events: none;
+    }
+
+    .textContainerVisu3 {
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 100px;
+        font-size: 20px;
+        pointer-events: none;
+    }
+
+    #textContainerVisu5 {
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 30px;
+        font-size: 20px;
+        pointer-events: none;
+    }
+
+    @keyframes animTexte {
+        0% {
+            opacity: 0;
+            left:  200px;
+        }
+
+        100%{
+            opacity: 1;
+            left: 0px;
+        }
+    }
+
+ }

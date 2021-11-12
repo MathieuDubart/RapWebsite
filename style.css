@@ -1,0 +1,669 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4f5d75;
+    font-family: 'Birthstone', cursive;
+    color: #47FF00;
+    text-align: center;
+    font-size: 45px;
+}
+
+
+header {
+    height: 250px;
+    position:relative;
+    background-color: #2D3142;
+    z-index: 1;
+
+}
+
+#menu {
+   display: none;
+}
+
+h1{
+    height: 150px;
+    pointer-events: none;
+    animation-name: animTitre;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animTitre {
+     0% {
+        opacity: 0%;
+        transform: scale(0.5, 0.5);
+     }
+
+     100% {
+        opacity: 100%;
+        transform: scale(1, 1);
+     }
+}
+
+input {
+    display: none;
+}
+#navbar {
+    display: none;
+}
+
+#navpc {
+    height: 100px;
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    display: flex;
+    -webkit-position: sticky;
+    position: sticky;
+    top:0px;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.navlinkpc{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Birthstone', cursive;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 75px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 30px;
+    word-spacing: 0%;
+}
+
+.navlinkpc:hover{
+    transform: scale(1.35, 1.35);
+}
+
+.selected {
+    color: #47FF00;
+}
+
+/* ******************************************************************* */
+/*                CSS  pour la Galerie                                 */
+/* ******************************************************************* */
+#lienMenuAlphabet {
+    display: none;
+}
+
+.lienMenuAlphabet2 {
+    display: none;
+}
+
+#imgMenuAlphabet {
+    display: none;
+}
+
+#navAlphabet {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #4f5d75 ;
+    width: 150px;
+    height: calc(100% - 250px);
+    top:  250px;
+    z-index: 10;
+    border-right:  black 1px solid;
+    left: -3px;
+    flex-wrap:  wrap;
+}
+
+/*
+.bienvenue {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: calc(100% - 150px);
+    left: 150px;
+    border-radius: 5px;
+    font-size: 120px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+} */
+
+section {
+    display:  none;
+}
+
+
+section:target {
+      display: flex;
+      animation-name: displaySection;
+      animation-duration: 1s;
+      animation-direction: alternate-reverse;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      z-index: 0;
+    }
+
+    /* remove the comment tags below to make confetti appear */
+
+/*
+.containerConfetti {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top:  -20px;
+          left: 0px;
+          overflow: hidden;
+          pointer-events: none;
+        }
+        .confetti {
+          width: 15px;
+          height: 15px;
+          background-color: #f2d74e;
+          position: absolute;
+          left: 50%;
+      }
+
+.containerConfetti .confetti {
+          animation: confetti 4s ease-in-out -2s 1;
+          transform-origin: left top;
+        }
+        
+        .confetti:nth-child(1) {
+          background-color: #0000FF; left: 10%; animation-delay: 0s;
+        }
+        .confetti:nth-child(2) {
+          background-color: #0000FF; left: 20%; animation-delay: 1s;
+        }
+        .confetti:nth-child(3) {
+          background-color: #3333FF; left: 30%; animation-delay: 2s;
+        }
+        .confetti:nth-child(4) {
+          background-color: #33CC33; left: 40%; animation-delay: 1.5s;
+        }
+        .confetti:nth-child(5) {
+          background-color: #9933FF; left: 50%; animation-delay: 2.5s;
+        }
+        .confetti:nth-child(6) {
+          background-color: #33CC33; left: 60%; animation-delay: 2s;
+        }
+        .confetti:nth-child(7) {
+          background-color: #00FFFF; left: 70%; animation-delay: 1.5s;
+        }
+        .confetti:nth-child(8) {
+          background-color: #0000FF; left: 80%; animation-delay: 2s;
+        }
+        .confetti:nth-child(9) {
+          background-color: #33CC00; left: 90%; animation-delay: 1.5s;
+        }
+        .confetti:nth-child(10) {
+          background-color: #CC33FF; left: 100%; animation-delay: 0.5s;
+        }
+
+@keyframes displaySection {
+     0% {
+        opacity:  100%;
+     }
+
+     100% {
+        opacity: 0%;
+     }
+}
+
+@keyframes confetti {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+        }
+*/
+
+.lienAlphabetNone{
+    font-size: 25px;
+    color:  black;
+    font-weight: bolder;
+
+}
+.lienAlphabet {
+    font-size: 30px;
+    text-decoration: none;
+    color: #47FF00;
+    font-weight: bolder;
+}
+
+
+
+#titrePhone {
+    display: none;
+}
+
+#pageContainer {
+    position: relative;
+    top: 5px;
+}
+
+.titreGalerie {
+    position: relative ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+.Galerie{
+	width:100%;
+	position:relative;
+	right:0;
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:wrap;
+}
+
+.imgContainer {
+	width:300px;
+	height:300px;
+	border: #BFC0C0 5px solid;
+	border-radius:50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+	margin-right: 120px;
+    margin-left: 120px;
+	overflow:hidden;
+	position:relative;
+}
+
+.imgContainer .img_artist{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:all 0.25s;
+	position:relative;
+}
+
+.imgContainer:hover .img_artist{
+	transform:scale(1.5);
+    filter:grayscale(1) contrast(1.1);
+}
+
+.imgContainer .title{
+	background-color:rgba(0,0,0,0.7);
+	position:absolute;
+	top:100%;
+	left:0;
+	width:100%;
+	height:100%;
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transition:all 0.2s;
+	transition-delay:0.25s;
+	font-size:30px;
+}
+
+.imgContainer:hover .title{
+	top:0px;
+	
+}
+
+.imgContainerUP {display:none;}
+
+
+/* ******************************************************************* */
+/*                CSS  pour les Projets                                */
+/* ******************************************************************* */
+
+#titrePhonePj{
+    display: none;
+}
+
+#pageContainerProjets {
+    position: relative;
+    top: 5px;
+    width: calc(100% - 150px);
+    left: 150px;
+}
+
+.titreProjets {
+    position: relative ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.GalerieProjets{
+	width:100%;
+	position:relative;
+	right:0;
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content: space-evenly;
+	flex-wrap:wrap;
+}
+
+.imgContainerP {
+	width:290px;
+	height:290px;
+	border: #BFC0C0 5px solid;
+	border-radius:5%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+	margin-right: 60px;
+    margin-left: 60px;
+	overflow:hidden;
+	position:relative;
+}
+
+.imgContainerP .img_projets{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:all 0.25s;
+	position:relative;
+}
+
+.imgContainerP:hover .img_projets{
+	transform:scale(1.5);
+}
+
+.imgContainerP .title{
+	background-color:rgba(0,0,0,0.7);
+	position:absolute;
+	top:100%;
+	left:0;
+	width:100%;
+	height:100%;
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transition:all 0.2s;
+	transition-delay:0.25s;
+	font-size:30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.imgContainerP:hover .title{
+	top:0px;
+	
+}
+
+
+.sectionProjets {
+    display:  none;
+}
+
+.sectionProjets:target {
+      display: flex;
+      animation-name: displayProjets;
+      animation-duration: 1s;
+      animation-direction: alternate-reverse;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      z-index: 0;
+    }
+
+@keyframes displayProjets {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ******************************************************************* */
+/*                CSS  pour les Téléphones                             */
+/* ******************************************************************* */
+
+
+@media screen and (max-width: 1023px) {
+    body {
+        font-size: 25px;
+    }
+
+    header {
+        height: 70px;
+        position: block;
+    }
+
+    #menu {
+
+        height: 100%;
+        display:flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+    }
+
+    input #togglemenu{
+        display: none;
+    }
+
+    #togglemenu:checked ~ #navbar{
+
+        transform: translateX(0);
+        
+    }
+
+    #navbar {
+        background-color: #4f5d75;
+        padding: 15px;
+        display: flex;
+        position: absolute;
+        left: -3px;
+        top:70px;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: transform 0.5s;
+        transform: translateX(-100%);
+        z-index: 100;
+        border-top: black 1px solid;
+        border-right: black 1px solid;
+        border-bottom: black 1px solid;
+        border-radius: 5px;
+    }
+
+    .navpc {
+        display:none;
+    }
+    .navlinkpc{
+        display: none;
+    }
+
+    .navlink{
+        font-family: 'Birthstone', cursive;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        font-size: 55px;
+        text-decoration: none;
+    }
+
+
+    .selected {
+        color: #47ff00;
+    }
+
+    .imgContainerUP {
+        display: flex;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 120px;
+        margin-left: 120px;
+        overflow:hidden;
+        position:relative;
+    }
+
+/* ******************************************************************* */
+/*                CSS  pour la Galerie                                 */
+/* ******************************************************************* */
+    
+    #imageMenuAlphabet {
+        background-color: #4f5d75;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #imgMenuAlphabet{
+        background-color: #4f5d75;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menuAlphabet {
+        height: 100vh;
+        top: calc(100% - 60px);
+        position:  fixed;
+        z-index: 11;
+        border:  black 1px solid;
+        border-radius: 5px;
+        transition: all 0.5s;
+    }
+
+    #menuAlphabet:target {
+        top: 0px;
+    }
+
+
+    #navAlphabet{
+        width: 100%;
+        left: 0px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+        top:  0px;
+        border: none;
+    }
+
+    .lienAlphabet, .lienAlphabetNone {
+        font-size: 75px;
+        margin: 15px;
+    }
+
+    #lienMenuAlphabet {
+        display: block;
+    }
+
+    #lienMenuAlphabet2 {
+        display: none;
+    }
+
+    #menuAlphabet:target #lienMenuAlphabet {display: none;}
+    #menuAlphabet:target #lienMenuAlphabet2 {display: block;}
+   
+    #pageContainer {
+        padding-bottom: 50px;
+    }
+
+    #titrePhone {
+        font-size: 65px;
+        width:100%;
+        position:relative;
+        right:0;
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:space-around;
+        flex-wrap:wrap;
+  
+    }
+
+    .imgContainer {
+	margin: 30px;
+    }
+
+    .imgContainerUP {
+        display: flex;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 120px;
+        margin-left: 120px;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .imgContainerUP .img_UP{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        transition:all 0.25s;
+        position:relative;
+    }
+    
+
+   
+/* ******************************************************************* */
+/*                CSS  pour les Projets                                */
+/* ******************************************************************* */
+    #titrePhonePj {
+        font-size: 65px;
+        width:100%;
+        position:relative;
+        top:5px;
+        right:0;
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:space-around;
+        flex-wrap:wrap;
+    }
+
+    #pageContainerProjets {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    left: 0px;
+    padding-bottom: 50px;
+    }
+
+    #GalerieProjets {
+        top: 5px;
+    }
+
+    .imgContainerP {
+	    margin: 30px;
+        width:250px;
+        height:250px;
+    }
