@@ -8,7 +8,7 @@
 body {
     background-color: #4f5d75;
     font-family: 'Birthstone', cursive;
-    color: #47FF00;
+    color: white;
     text-align: center;
     font-size: 45px;
 }
@@ -29,22 +29,6 @@ header {
 h1{
     height: 150px;
     pointer-events: none;
-    animation-name: animTitre;
-    animation-duration: 2s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-}
-
-@keyframes animTitre {
-     0% {
-        opacity: 0%;
-        transform: scale(0.5, 0.5);
-     }
-
-     100% {
-        opacity: 100%;
-        transform: scale(1, 1);
-     }
 }
 
 input {
@@ -88,12 +72,13 @@ input {
 }
 
 .selected {
-    color: #47FF00;
+    color: #bfbfbf;
 }
 
 /* ******************************************************************* */
 /*                CSS  pour la Galerie                                 */
 /* ******************************************************************* */
+
 #lienMenuAlphabet {
     display: none;
 }
@@ -120,19 +105,6 @@ input {
     flex-wrap:  wrap;
 }
 
-/*
-.bienvenue {
-    background-color: rgba(0, 0, 0, 0.8);
-    width: calc(100% - 150px);
-    left: 150px;
-    border-radius: 5px;
-    font-size: 120px;
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-} */
-
 section {
     display:  none;
 }
@@ -141,13 +113,24 @@ section {
 section:target {
       display: flex;
       animation-name: displaySection;
-      animation-duration: 1s;
+      animation-duration: 1.5s;
       animation-direction: alternate-reverse;
       animation-iteration-count: 1;
       animation-fill-mode: both;
       z-index: 0;
     }
 
+@keyframes displaySection {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
     /* remove the comment tags below to make confetti appear */
 
 /*
@@ -232,7 +215,7 @@ section:target {
 .lienAlphabet {
     font-size: 30px;
     text-decoration: none;
-    color: #47FF00;
+    color: white;
     font-weight: bolder;
 }
 
@@ -411,7 +394,7 @@ section:target {
 .sectionProjets:target {
       display: flex;
       animation-name: displayProjets;
-      animation-duration: 1s;
+      animation-duration: 1.5s;
       animation-direction: alternate-reverse;
       animation-iteration-count: 1;
       animation-fill-mode: both;
@@ -426,7 +409,7 @@ section:target {
     
     100% {
         opacity: 0;
-        transform: scale(2);
+        transform: scale(0.5);
     }
 }
 
@@ -502,7 +485,7 @@ section:target {
     .navlink{
         font-family: 'Birthstone', cursive;
         font-weight: bold;
-        color: black;
+        color: white;
         text-align: center;
         font-size: 55px;
         text-decoration: none;
@@ -510,7 +493,7 @@ section:target {
 
 
     .selected {
-        color: #47ff00;
+        color: #bfbfbf;
     }
 
     .imgContainerUP {
