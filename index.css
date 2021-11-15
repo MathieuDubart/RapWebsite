@@ -8,6 +8,10 @@ body   {
     background-color: black;
 }
 
+#pageContainer {
+    max-width: 1920px;
+    max-height: 1080px;
+}
 #titleContainer {
     border: violet 1px solid;
     width: 1200px;
@@ -46,6 +50,8 @@ body   {
     align-items: center;
     position: absolute;
 }
+
+
 /**************************************/
 /*         CSS Téléphones             */
 /**************************************/
