@@ -7,7 +7,7 @@
 
 body {
     background-color: #4f5d75;
-    font-family: 'Birthstone', cursive;
+    font-family: 'Roboto', sans-serif;
     color: white;
     text-align: center;
     font-size: 45px;
@@ -55,16 +55,16 @@ input {
 .navlinkpc{
     display: flex;
     width: 25%;
+    height: 80%;
     justify-content: center;
     align-items: center;
-    font-family: 'Birthstone', cursive;
+    font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     text-align: center;
     font-size: 75px;
     font-weight: bold;
     text-decoration: none;
     margin-bottom: 30px;
-    word-spacing: 0%;
 }
 
 .navlinkpc:hover{
@@ -207,16 +207,17 @@ section:target {
 */
 
 .lienAlphabetNone{
-    font-size: 25px;
+    font-size: 20px;
     color:  black;
     font-weight: bolder;
-
+    margin-top: 7px;
 }
 .lienAlphabet {
     font-size: 30px;
     text-decoration: none;
     color: white;
     font-weight: bolder;
+    margin-top: 7px;
 }
 
 
@@ -483,7 +484,7 @@ section:target {
     }
 
     .navlink{
-        font-family: 'Birthstone', cursive;
+        font-family: 'Roboto', sans-serif;
         font-weight: bold;
         color: white;
         text-align: center;
@@ -558,7 +559,7 @@ section:target {
     }
 
     .lienAlphabet, .lienAlphabetNone {
-        font-size: 75px;
+        font-size: 70px;
         margin: 15px;
     }
 

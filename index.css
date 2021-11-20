@@ -13,18 +13,15 @@ body   {
     max-height: 1080px;
 }
 #titleContainer {
-    border: violet 1px solid;
-    width: 1200px;
+    width: 945px;
     height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    margin-left: 27%;
+    left: calc(50% - 472px);
+    top: calc(20% - 100px)
 }
 #pageTitle {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 150px;
 }
 
@@ -32,45 +29,58 @@ body   {
     width: 250px;
     height: 100px;
     display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: calc(50% - 80px);
-    margin-top: 10%;
     position: absolute;
+    left: calc(50% - 125px);
+    top: calc(40% - 50px)
 }
 #button {
     font-size: 80px;
     color: white;
     border: white 1px solid;
     border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: block;
     justify-content: center;
     align-items: center;
     position: absolute;
+    transition: 1s;
 }
 
+#button:hover {
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}
 
 /**************************************/
 /*         CSS Téléphones             */
 /**************************************/
 
-@media screen and (max-width: 1023px) {
+
+@media screen and (max-width: 1024px) {
+
+    #titleContainer {
+       width: 320px;
+       left: calc(50% - 160px);
+       top: calc(30% - 100px)
+    }
 
     #pageTitle {
-        font-size: 80px;
+        font-size: 60px;
         text-align: center;
-        margin-top: 30px;
     }
 
     #buttonContainer{
-        margin-left: calc(100vw - 70%);
-        text-align: center;
+        top: calc(60% - 50px);
     }
 
-    #button{
-        text-align: center;
-
-    }
-}
+} 
