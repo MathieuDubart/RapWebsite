@@ -81,7 +81,7 @@ a:visited{
 
     #buttonContainer{
         top: calc(60% - 50px);
-        left: calc(50% - 75px);
+        left: calc(50% - 85px);
     }
 
     #button {
