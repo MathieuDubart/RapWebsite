@@ -75,12 +75,17 @@ a:visited{
     }
 
     #pageTitle {
-        font-size: 60px;
+        font-size: 80px;
         text-align: center;
     }
 
     #buttonContainer{
         top: calc(60% - 50px);
+        left: calc(50% - 75px);
+    }
+
+    #button {
+        font-size: 60px;
     }
 
 } 
